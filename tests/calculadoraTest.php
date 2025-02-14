@@ -1,10 +1,9 @@
 <?php
 use PHPUnit\Framework\TestCase;
 use App\Calculadora;
-class CalculadoraTest extends TestCase
-{
-    public function testSuma()
-    {
+
+class CalculadoraTest extends TestCase {
+    public function testSuma() {
         $calc = new Calculadora();
         $resultado = $calc->suma(3, 2);
         $this->assertEquals(5, $resultado);
@@ -12,32 +11,32 @@ class CalculadoraTest extends TestCase
         $this->assertGreaterThan(4, $resultado);
         $this->assertNotNull($resultado);
     }
-    public function testResta()
-    {
+
+    public function testResta() {
         $calc = new Calculadora();
         $resultado = $calc->resta(3, 2);
         $this->assertEquals(1, $resultado);
         $this->assertGreaterThan(0, $resultado);
         $this->assertNotNull($resultado);
     }
-    public function testMultiplicacion()
-    {
+
+    public function testMultiplicacion() {
         $calc = new Calculadora();
         $resultado = $calc->multiplicacion(3, 2);
         $this->assertEquals(6, $resultado);
         $this->assertGreaterThan(0, $resultado);
         $this->assertNotNull($resultado);
     }
-    public function testDivision()
-    {
+
+    public function testDivision() {
         $calc = new Calculadora();
         $resultado = $calc->division(4, 2);
         $this->assertEquals(2, $resultado);
         $this->assertGreaterThan(0, $resultado);
         $this->assertNotNull($resultado);
     }
-    public function testRaiz()
-    {
+
+    public function testRaiz() {
         $calc = new Calculadora();
         $resultado = $calc->raiz(4);
         $this->assertEquals(2, $resultado);
