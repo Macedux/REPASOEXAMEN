@@ -31,9 +31,9 @@ jobs:
       run: composer install 
     - name: Deploy to server
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.REMOTE_KEY }}
-        HOST: ${{ secrets.REMOTE_HOST }}
-        USERNAME: ${{ secrets.REMOTE_USER }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
         DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
       run: |
         mkdir -p ~/.ssh
