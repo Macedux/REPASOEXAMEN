@@ -76,7 +76,7 @@ jobs:
     # Paso cd php: entrar al directorio php antes de construir la imagen Docker
     - name: Build and push PHP Docker image 
       run: | 
-        cd php  # Entrar al directorio PHP
+        
         docker build -t ${{ secrets.DOCKER_USERNAME }}/mi_app_cine:v1 . 
         docker push ${{ secrets.DOCKER_USERNAME }}/mi_app_cine:v1
 
